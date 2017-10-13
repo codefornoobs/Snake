@@ -16,6 +16,8 @@ public class ScoreManager : MonoBehaviour
     public static void updateScore(int scoreToUpdate)
     {
         _score += scoreToUpdate;
+        if (_score < 0)
+            _score = 0;
         Text _scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
         _scoreText.text = "Score: " + _score;
     }
