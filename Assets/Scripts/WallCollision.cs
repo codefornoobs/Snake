@@ -18,10 +18,10 @@ public class WallCollision : MonoBehaviour
 
 	public void OnTriggerEnter2D(Collider2D other)
 	{
-	    if (other.name == SNAKE_NAME)
-	    {
-	        other.transform.position = new Vector3(0, 0, other.transform.position.z);
-            ScoreManager.updateScore(-10);
-        }
-    }
+		if (other.name == SNAKE_NAME)
+		{
+			other.transform.position = new Vector3(0, 0, other.transform.position.z);
+			ScoreManager.updateScore(-10);
+		}
+	}
 }
